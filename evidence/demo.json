@@ -1,0 +1,77 @@
+{
+  "input": 5,
+  "canonical_before": 3,
+  "planned_canonical_after": 4,
+  "counts": {
+    "match": 2,
+    "review": 2,
+    "create": 1
+  },
+  "rows": [
+    {
+      "source": "l-1",
+      "action": "match",
+      "reason": "one canonical identity",
+      "candidates": [
+        "c-1"
+      ],
+      "signals": {
+        "email": [
+          "c-1"
+        ],
+        "phone": [
+          "c-1"
+        ]
+      }
+    },
+    {
+      "source": "l-2",
+      "action": "review",
+      "reason": "identity signals disagree",
+      "candidates": [
+        "c-2",
+        "c-3"
+      ],
+      "signals": {
+        "email": [
+          "c-2"
+        ],
+        "phone": [
+          "c-3"
+        ]
+      }
+    },
+    {
+      "source": "l-3",
+      "action": "create",
+      "reason": "no canonical identity matched",
+      "candidates": [],
+      "signals": {
+        "email": [],
+        "phone": []
+      }
+    },
+    {
+      "source": "l-4",
+      "action": "review",
+      "reason": "no usable identity signal",
+      "candidates": [],
+      "signals": {}
+    },
+    {
+      "source": "l-5",
+      "action": "match",
+      "reason": "one canonical identity",
+      "candidates": [
+        "c-3"
+      ],
+      "signals": {
+        "email": [
+          "c-3"
+        ]
+      }
+    }
+  ],
+  "staged_creates": 1,
+  "creates_when_repeated": 0
+}
